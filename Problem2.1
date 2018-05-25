@@ -1,0 +1,46 @@
+/*******************************************************
+Program Number: 1a
+Author: Nicolas Dabdoub
+Purpose/Description: Swap two adjacent elements using only the links(single linked lists)
+Due date: <02/28/15>
+Certification:
+I hereby certify that this work is my own and none of it is the
+work of any other person.
+ < Nicolas Daboub> 
+*******************************************************/
+
+// beforep is the cell before the two adjacent cells that are to be swapped.
+
+ public static void swapWithNext( Node beforep )
+
+ {
+    Node p, afterp;
+    p = beforep.next;
+    afterp = p.next;
+
+    p.next = afterp.next;
+    afterp = beforep.next;
+    beforep.next = afterp;
+    
+ }
+
+Problem 1b
+
+// p and afterp are cells to be switched.
+
+ public static void swapWithNext( Node p )
+
+ {
+
+    Node beforep, afterp;
+    p = beforep.next;
+    afterp = p.next;
+    
+    p.next = afterp.next;    
+    afterp.next = p;
+    beforep.next = afterp;
+    afterp.prev = beforep;
+    p.prev = afterp;
+    p.next.prev = p;
+
+ }
