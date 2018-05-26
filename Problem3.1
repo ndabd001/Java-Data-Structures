@@ -1,0 +1,65 @@
+/*******************************************************
+
+Program Number: A3_3
+
+Purpose/Description: <a brief description of the program>
+
+Author: Nicolas Dabdoub
+
+Due date: <03/31/15>
+
+Certification:
+
+I hereby certify that this work is my own and none of it is the work of any other 
+
+person.
+
+ Nicolas Dabdoub
+
+*******************************************************/
+
+Note: n can change at any step.
+
+1)   Compare x with the middle node of the binary min-heap tree. The node that x 
+     is being compared with will be referred to as n.
+
+2)   If x is equal to n then you have found x and the algorithm is complete.
+
+3)   If x is less than n, compare x with the node on n's left providing there is a
+     node to the left. Note: if x is greater than n then more to step 4.
+
+3.1) Continue comparing x with nodes to the left of n until the node to the 
+     left of n is greater than x or there are no more nodes on the left or x is 
+     equal to the node it is comparing in which case the algorithm is complete and
+     x has been found.
+
+3.2) In both cases where the node to the left of n is greater than x or there is
+     no node to the left of n the next step is to compare x with the node below
+     on the left side. 
+
+3.3) If x is equal to n(the node below) then the algorithm is complete and x has
+     been found in the tree.
+
+3.4) If x is less than n then continue moving down the tree to the left until x 
+     is found or until there are no more nodes below n. If there are no more nodes
+     below n and x has still not been found then x is not in the tree.
+
+3.5) If x is greater than n then move to step 4.
+
+4)   If x is greater than n then compare x with the node to the right of n if there
+     is a node on n's right. 
+
+4.1) Continue comparing x with nodes to the right of n until the node to the 
+     right of n is less than x or there are no more nodes on the left or x is 
+     equal to the node it is comparing in which case the algorithm is complete and
+     x has been found.
+
+4.2) In both cases where the node to the right of n is less than x or there is
+     no node to the right of n the next step is to compare x with the node above.
+
+4.3) If x is equal to n(the node above) then the algorithm is complete and x has
+     been found in the tree.
+
+4.4) If x is greater than n then continue moving up the tree until x is found or 
+     until there are no more nodes above n. If there are no more nodes above n 
+     and x has still not been found then x is not in the tree.
